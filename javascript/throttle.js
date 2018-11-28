@@ -1,3 +1,8 @@
+/**
+ * 函数节流
+ * @param {Function} fn 
+ * @param {number} interval 
+ */
 const throttle = function(fn, interval) {
     let timer = null
     let firstTime = true
