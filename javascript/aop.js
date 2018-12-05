@@ -32,4 +32,8 @@ func = func.after(function() {
     console.log(3)
 })
 
+func = func.after(function() {
+    console.log(4)
+})
+
 func()
