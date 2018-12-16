@@ -15,7 +15,7 @@
         <div class="sk-circle11 sk-circle"></div>
         <div class="sk-circle12 sk-circle"></div>
       </div>
-      <p class="loading">正在加载中...</p>
+      <!-- <p class="loading">正在加载中...</p> -->
     </div>
   </div>
 </template>
