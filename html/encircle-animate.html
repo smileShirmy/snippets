@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>环形动画</title>
+  <style>
+    body {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .rect {
+      height: 100px;
+      width: 100px;
+      background: #2d9fff;
+      animation: encircle 2s infinite linear;
+    }
+    @keyframes encircle {
+      from {
+        transform: translate(50%, 150px)
+        rotate(0turn)
+        translate(-50%, -150px)
+        translate(50%, 50%)
+        rotate(1turn)
+        translate(-50%, -50%)
+      }
+      to {
+        transform: translate(50%, 150px)
+        rotate(1turn)
+        translate(-50%, -150px)
+        translate(50%, 50%)
+        rotate(0turn)
+        translate(-50%, -50%)
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="rect"></div>
+</body>
+</html>
