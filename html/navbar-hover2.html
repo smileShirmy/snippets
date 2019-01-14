@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>navbar hover2</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .nav-wrap {
+      border-bottom: 1px solid #ccd0d7;
+      height: 54px;
+      padding: 0 0 1px;
+      margin: 18px auto 0;
+      position: relative;
+    }
+    .nav-wrap .wrap {
+      height: 100%;
+      position: relative;
+    }
+    .clearfix:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+      overflow: hidden;
+    }
+    .nav-wrap .hover-bar {
+      position: absolute;
+      height: 2px;
+      background-color: #00a1d6;
+      width: 39px;
+      bottom: -1px;
+      transition: left .2s;
+    }
+    .nav-wrap .wrap>.sub {
+      float: left;
+      line-height: 54px;
+      text-align: center;
+      cursor: pointer;
+      width: 39px;
+      font-size: 16px;
+      padding: 0 75px 0 0;
+      height: 100%;
+      position: relative;
+    }
+    .nav-wrap .wrap>.sub.active,
+    .nav-wrap .wrap>.sub:hover {
+      color: #00a1d6;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <ul class="wrap clearfix">
+      <li class="sub">综合</li>
+      <li class="sub">视频</li>
+      <li class="sub">番剧</li>
+      <li class="sub">影视</li>
+      <li class="sub">直播</li>
+    </ul>
+    <div class="hover-bar" style="left: 0;"></div>
+  </div>
+</body>
+<script>
+  const wrap = document.querySelector('.wrap')
+  wrap.addEventListener('mouseover', (e) => {
+    const left = e.target.offsetLeft + 'px'
+    document.querySelector('.hover-bar').style.left = left
+  })
+</script>
+</html>
