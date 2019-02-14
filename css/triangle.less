@@ -1,0 +1,20 @@
+&:first-child {
+  position: relative;
+  &::before, &::after {
+    content: '';
+    display: block;
+    border-width: 8px;
+    position: absolute;
+    bottom: 11px;
+    left: 138px;
+    border-style: solid dashed dashed;
+    border-color: transparent transparent transparent @color-border;
+    font-size: 0;
+    line-height: 0;
+  }
+  &::after {
+    bottom: 12px;
+    border-color: transparent transparent transparent #fff;
+    border-width: 7px;
+  }
+}
